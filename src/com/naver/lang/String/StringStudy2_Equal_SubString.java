@@ -1,6 +1,6 @@
 package com.naver.lang.String;
 
-public class StringStudy2
+public class StringStudy2_Equal_SubString
 {
 	public void studyIndexOfEx1()
 	{

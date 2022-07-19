@@ -1,6 +1,6 @@
 package com.naver.lang.String;
 
-public class StringStudy
+public class StringStudy_StringLength
 {
 	public void studyCharAt()
 	{
