@@ -42,23 +42,23 @@ public class WrapperEx1
 
 		if (birth > 2 && birth < 6)
 		{
-			System.out.println("생일: " + birth + "월" + " 봄");
+			System.out.println("생일: " + birth + "월" + ", 봄");
 		}
 		else if (birth > 5 && birth < 9)
 		{
-			System.out.println("생일: " + birth + "월" + " 여름");
+			System.out.println("생일: " + birth + "월" + ", 여름");
 		}
 		else if (birth > 8 && birth < 12)
 		{
-			System.out.println("생일: " + birth + "월" + " 가을");
+			System.out.println("생일: " + birth + "월" + ", 가을");
 		}
 		else if (birth == 12)
 		{
-			System.out.println("생일: " + birth + "월" + " 겨울");
+			System.out.println("생일: " + birth + "월" + ", 겨울");
 		}
 		else if (birth > 0 && birth < 3)
 		{
-			System.out.println("생일: " + birth + "월" + " 겨울");
+			System.out.println("생일: " + birth + "월" + ", 겨울");
 		}
 	}
 }

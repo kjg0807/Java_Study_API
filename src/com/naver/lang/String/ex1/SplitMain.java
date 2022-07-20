@@ -14,7 +14,6 @@ public class SplitMain
 		wv.view(workerDTOs);
 
 		int num = 10;
-		String str = String.valueOf(num);
-		
+		String str = String.valueOf(num);		
 	}
 }

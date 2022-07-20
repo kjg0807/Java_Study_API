@@ -15,6 +15,41 @@ public class WrapperEx2
 
 	public void juminCheck()
 	{
-		
+		System.out.println("주민번호 입력");
+		// String jumin = sc.next();
+		String jumin = "971224-1234567";
+		int i;
+		int count = 2;
+		int sum = 0;
+
+		for (i = 0; i < jumin.length() - 1; i++)
+		{
+			// String num = jumin.substring(i, i+1);
+			// int n = Integer.parseInt(num);
+			// jumin.replace("-", "");
+			if (i == 6)
+			{
+				continue;
+			}
+			int n = Integer.parseInt(String.valueOf(jumin));
+			sum = sum + n * count;
+			count++;
+		}
+		int ch = sum % 11;
+		ch = 11 - ch;
+		if (ch > 9)
+		{
+			ch = ch % 10;
+		}
+		int chNum = Integer.parseInt(String.valueOf(jumin));
+		// jumin.substring(13);
+		if (ch == chNum)
+		{
+			System.out.println("정상 주민번호");
+		}
+		else
+		{
+			System.out.println("비정상 주민번호");
+		}
 	}
 }
