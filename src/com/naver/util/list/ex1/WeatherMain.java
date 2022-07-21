@@ -14,7 +14,7 @@ public class WeatherMain
 		// WeatherView - 정보 출력 (작업X) 읽기 전용
 		// CityDTO - Data(다른 작업X)
 
-		WeatherControl wc = new WeatherControl();
+		WeatherController wc = new WeatherController();
 		wc.start();
 	}
 }

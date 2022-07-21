@@ -3,7 +3,7 @@ package com.naver.util.list.ex1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class WeatherControl
+public class WeatherController
 {
 	// WeatherController - start
 	// 1. 날씨 정보 초기화 - init?
@@ -20,7 +20,7 @@ public class WeatherControl
 	private WeatherView wv;
 	private Scanner sc;
 
-	public WeatherControl()
+	public WeatherController()
 	{
 		this.ws = new WeatherService();
 		this.wv = new WeatherView();
