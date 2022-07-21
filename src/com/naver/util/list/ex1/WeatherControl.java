@@ -32,7 +32,7 @@ public class WeatherControl
 		System.out.println("---날씨 정보---");
 		boolean ch = true;
 
-		ArrayList<CityDTO> ar = new ArrayList<>();		
+		ArrayList<CityDTO> ar = new ArrayList<>();
 
 		while (ch)
 		{

@@ -27,6 +27,7 @@ public class WeatherService //
 	{
 		String data = sb.toString();
 		data = data.replace("-", ",");
+		data = data.replace(" ", "");
 
 		StringTokenizer st = new StringTokenizer(data, ",");
 
@@ -55,8 +56,6 @@ public class WeatherService //
 		city.setHum(sc.next());
 		System.out.println("날씨 입력");
 		city.setStatus(sc.next());
-
-		ar.add(city);
 
 		return ar.add(city);
 	}

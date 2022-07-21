@@ -17,5 +17,4 @@ public class WeatherMain
 		WeatherControl wc = new WeatherControl();
 		wc.start();
 	}
-
 }
