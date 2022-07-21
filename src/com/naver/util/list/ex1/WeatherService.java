@@ -28,7 +28,7 @@ public class WeatherService //
 		String data = sb.toString();
 		data = data.replace("-", ",");
 
-		StringTokenizer st = new StringTokenizer(data);
+		StringTokenizer st = new StringTokenizer(data, ",");
 
 		while (st.hasMoreTokens())
 		{
@@ -42,7 +42,7 @@ public class WeatherService //
 		}
 	}
 
-	public void addWeather(ArrayList<CityDTO> ar)
+	public boolean addWeather(ArrayList<CityDTO> ar)
 	{
 		// System.out.println("정보 추가");
 		CityDTO city = new CityDTO();
@@ -57,31 +57,52 @@ public class WeatherService //
 		city.setStatus(sc.next());
 
 		ar.add(city);
+
+		return ar.add(city);
 	}
 
-	public void removeWeather(ArrayList<CityDTO> ar)
+	public boolean removeWeather(ArrayList<CityDTO> ar)
 	{
 		// System.out.println("삭제할 날씨 입력");
 		System.out.println("삭제할 도시명 입력");
 		String name = sc.next();
-
-		for (int i = 0; i < ar.size(); i++)
+		boolean r = false;
+		// for (int i = 0; i < ar.size(); i++)
+		// {
+		// if (name.equals(ar.get(i).getName()))
+		// {
+		// ar.remove(i);
+		// break;
+		// }
+		// }
+		for (CityDTO city : ar)
 		{
-			if (name.equals(ar.get(i).getName()))
+			if (name.equals(city.getName()))
 			{
-				ar.remove(i);
+				ar.remove(city);
+				r = !r;
 				break;
 			}
 		}
+		return r;
 	}
 
-	public void findWeather(ArrayList<CityDTO> ar)
+	public CityDTO findWeather(ArrayList<CityDTO> ar)
 	{
-		System.out.println("날씨 검색할 지역 입력");
-	}
+		// System.out.println("날씨 검색할 지역 입력");
+		CityDTO city = null;
+		System.out.println("검색할 도시명 입력");
+		String name = sc.next();
 
-	public void deleteWeather(ArrayList<CityDTO> ar)
-	{
-		System.out.println("날씨 정보 전체 삭제");
+		for (CityDTO city1 : ar)
+		{
+			if (name.equals(city1.getName()))
+			{
+				city = city1;
+				break;
+			}
+		}
+
+		return city;
 	}
 }
