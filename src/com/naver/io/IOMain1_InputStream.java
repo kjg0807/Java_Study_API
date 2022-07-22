@@ -14,17 +14,19 @@ public class IOMain1_InputStream
 		InputStream is = System.in; // byte 처리
 		InputStreamReader ir = new InputStreamReader(is); // 한 글자
 		BufferedReader br = new BufferedReader(ir); // 키보드와 연결
+
+		System.out.println("키보드에서 입력 후 엔터");
+		String msg = "";
 		try
 		{
-			System.out.println("키보드에서 입력 후 엔터");
-			String msg = br.readLine();
-			System.out.println(msg);
+			msg = br.readLine();
 		}
 		catch (IOException e)
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println(msg);
 	}
 
 }
