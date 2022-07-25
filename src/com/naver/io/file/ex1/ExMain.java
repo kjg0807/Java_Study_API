@@ -10,12 +10,13 @@ public class ExMain
 
 	public static void main(String[] args)
 	{
-		StudentDAO sd = new StudentDAO();
+		// StudentDAO sd = new StudentDAO();
+		StudentService studentService = new StudentService();
 		ArrayList<StudentDTO> ar = null;
-		
+
 		try
 		{
-			ar = sd.getList();
+			ar = studentService.getList();
 			for (StudentDTO stu : ar)
 			{
 				System.out.println(stu.getName());
@@ -31,6 +32,5 @@ public class ExMain
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// System.out.println(ar);
 	}
 }
