@@ -1,9 +1,6 @@
 package com.naver.io.file.ex1;
 
-import java.io.File;
 import java.util.ArrayList;
-
-import com.naver.io.file.FileRead;
 
 public class ExMain
 {
@@ -26,6 +23,25 @@ public class ExMain
 				System.out.println(stu.getMath());
 				System.out.println("---------------");
 			}
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		StudentDTO studentDTO = new StudentDTO();
+		studentDTO.setName("Add");
+		studentDTO.setNum(6);
+		studentDTO.setKor(50);
+		studentDTO.setEng(50);
+		studentDTO.setMath(50);
+		ar.add(studentDTO);
+
+		try
+		{
+			int result = studentService.setList(ar);
+			System.out.println("Result : " + result);
 		}
 		catch (Exception e)
 		{
